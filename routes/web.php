@@ -11,6 +11,14 @@ Route::get('/home', function() {
     return view ('home');
 })->name('home.index');
 
+Route::get('/about', function() {
+    return view ('about');
+})->name('about.index');
+
+Route::get('/shop', function() {
+    return view ('shop');
+})->name('shop.index');
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');

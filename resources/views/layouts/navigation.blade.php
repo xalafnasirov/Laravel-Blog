@@ -21,13 +21,15 @@
                                         <li>
                                             <a href="{{ route('profile.edit') }}
                                             >
-                                                <i class="icon icon-user"> {{ Auth::user()->name }}</i>
+                                                <i class="icon
+                                                icon-user"> {{ Auth::user()->name }}</i>
                                             </a>
                                         </li>
                                         <form method="POST" action="{{ route('logout') }}">
                                             @csrf
                                             <li>
-                                                <a href="{{ route('logout') }}" onclick="event.preventDefault();
+                                                <a href="{{ route('logout') }}"
+                                                    onclick="event.preventDefault();
                                                 this.closest('form').submit();">
                                                     Logout
                                                 </a>
@@ -81,7 +83,7 @@
                             </div>
                         </div>
                         <div class="col-lg-10 col-md-10">
-                            <div class="navbar">
+                            <div class="navbar"> 
 
                                 <div id="main-nav" class="stellarnav d-flex justify-content-end right">
                                     <ul class="menu-list">
@@ -89,57 +91,17 @@
                                         <li class="menu-item has-sub">
                                             <a href="{{ route('home.index') }}"
                                                 class="{{ request()->routeIs('home.index') ? 'active' : '' }} item-anchor d-flex align-item-center"
-                                                data-effect="Home">Home<i class="icon icon-chevron-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="index.html"
-                                                        class="{{ request()->routeIs('home.index') ? 'active' : '' }} item-anchor">Home</a>
-                                                </li>
-                                                <li><a href="home2.html" class="item-anchor">Home v2<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                            </ul>
+                                                data-effect="Home">Home</a>
+                                           
                                         </li>
 
-                                        <li><a href="{{ route('dashboard') }}"
-                                                class="item-anchor {{ request()->routeIs('dashboard') ? 'active' : '' }}"
+                                        <li><a href="{{ route('about.index') }}"
+                                                class="item-anchor {{ request()->routeIs('about.index') ? 'active' : '' }}"
                                                 data-effect="About">About</a></li>
 
                                         <li class="menu-item has-sub">
-                                            <a href="shop.html" class="item-anchor d-flex align-item-center"
-                                                data-effect="Shop">Shop<i class="icon icon-chevron-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="shop.html" class="item-anchor">Shop</a></li>
-                                                <li><a href="shop-slider.html" class="item-anchor">Shop slider<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="shop-grid.html" class="item-anchor">Shop grid<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="shop-list.html" class="item-anchor">Shop list<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="single-product.html" class="item-anchor">Single
-                                                        product<span class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="cart.html" class="item-anchor">Cart<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="wishlist.html" class="item-anchor">Wishlist<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="checkout.html" class="item-anchor">Checkout<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                            </ul>
-                                        </li>
-
-                                        <li class="menu-item has-sub">
-                                            <a href="#" class="item-anchor d-flex align-item-center"
-                                                data-effect="Pages">Pages<i class="icon icon-chevron-down"></i></a>
-                                            <ul class="submenu">
-                                                <li><a href="coming-soon.html" class="item-anchor">Coming soon<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="login.html" class="item-anchor">Login<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="faqs.html" class="item-anchor">FAQs<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                                <li><a href="styles.html" class="item-anchor">Styles</a></li>
-                                                <li><a href="thank-you.html" class="item-anchor">Thankyou</a></li>
-                                                <li><a href="error.html" class="item-anchor">Error page<span
-                                                            class="text-primary"> (PRO)</span></a></li>
-                                            </ul>
+                                            <a href="{{ route('shop.index') }}" class="{{ request()->routeIs('shop.index') ? 'active' : '' }} item-anchor d-flex align-item-center"
+                                                data-effect="Shop">Shop</a>
                                         </li>
 
                                         <li class="menu-item has-sub">
